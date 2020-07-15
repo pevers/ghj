@@ -1,10 +1,21 @@
 {
-  "name": "node-typescript-boilerplate",
-  "version": "0.0.0",
-  "description": "Minimalistic boilerplate to quick-start Node.js development in TypeScript.",
+  "name": "ghj",
+  "version": "0.0.1",
+  "description": "Jump to GitHub pages from the CLI.",
   "engines": {
-    "node": ">= 12.13 <13"
+    "node": ">= 12.13"
   },
+  "keywords": [
+    "cli",
+    "github",
+    "jump",
+    "pr",
+    "issues"
+  ],
+  "bin": {
+    "ghj": "build/src/main.js"
+  },
+  "prepublish": "build",
   "devDependencies": {
     "@types/jest": "~26.0.0",
     "@types/node": "~12.12.47",
@@ -28,9 +39,10 @@
     "test": "jest --coverage",
     "test:watch": "jest --watch"
   },
-  "author": "Jakub Synowiec <github@jakubsynowiec.info>",
+  "author": "Peter Evers",
   "license": "Apache-2.0",
   "dependencies": {
+    "open": "^7.0.4",
     "tslib": "~2.0.0"
   }
 }

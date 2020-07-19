@@ -15,9 +15,9 @@ export const commands: Command[] = [
     option: 'repo',
     url: (context: RepoContext, ...args: string[]): string => {
       let targetRepo = context.repo;
-      if (args.length == 2) {
+      if (args.length == 1) {
         // ghj issue other-repo
-        targetRepo = args[1];
+        targetRepo = args[0];
       }
       return `https://github.com/${context.organization}/${targetRepo}/issues/new`;
     },
@@ -29,9 +29,9 @@ export const commands: Command[] = [
     option: 'branch',
     url: (context: RepoContext, ...args: string[]): string => {
       let targetBranch = 'master';
-      if (args.length == 2) {
+      if (args.length == 1) {
         // ghj pr other-branch
-        targetBranch = args[1];
+        targetBranch = args[0];
       }
       return `https://github.com/${context.organization}/${context.repo}/compare/${targetBranch}...${context.branch}`;
     },

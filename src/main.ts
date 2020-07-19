@@ -87,7 +87,7 @@ const getContext = async (): Promise<RepoContext> => {
 
 (async () => {
   const commandString = process.argv[2];
-  const args = process.argv.slice(2);
+  const args = process.argv.length > 2 ? process.argv.slice(3) : undefined;
 
   const command = commands.filter((cmd) => cmd.name === commandString)[0];
   if (!command) {

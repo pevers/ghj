@@ -22,6 +22,6 @@ where <command> is one of:
 
         issue   repo            Open a new pull request for a the current repo or target <repo>
         pr      branch          Open a new pull request in the current repo against master or target <branch>
-        board                   Open the project board for the organization
+        board                   Open the project board for the organization (not the user)
         help                    Print this help page
 ```
